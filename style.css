@@ -3,27 +3,59 @@ html {
     font-family: sans-serif;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(252, 89, 116);
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #hangman {
     width: 800px;
     margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #word {
-    letter-spacing: 5px;
-    font-size: 2rem;
-    padding: 30px 20px;
+    width: 100%;
+    background-color: rgb(235, 71, 98);
     border: 3px black solid;
+    border-radius: 10px;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    padding: 30px 20px;
     text-align: center;
 }
 
 #letters {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
     padding: 20px 50px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #letters button {
-    padding: 10px;
-    margin: 10px;
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid black;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 18px;
+    margin: 10px 5px;
 }
 
 #output {
@@ -34,11 +66,11 @@ html {
 
 #output .step {
     width: calc(100% / 8);
-    border-right: 3px #fff solid;
+    margin-right: 1rem;
 }
 
 #output .step {
-    opacity: 0.1;
+    opacity: 0.2;
 }
 
 #output .step img {
@@ -49,4 +81,26 @@ html {
     text-align: center;
     padding: 30px 0px;
     text-transform: uppercase;
+}
+
+.new-game {
+    width: fit-content;
+    background-color: aqua;
+    margin: 50px;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(235, 71, 98);
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: all 0.5s linear;
+}
+
+.new-game:hover {
+    background-color: black;
+    color: rgb(235, 71, 98);
+    transition-duration: 0.4s;
+    transition: all 0.8s linear;
 }
