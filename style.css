@@ -30,14 +30,16 @@ body {
     background-color: rgb(235, 71, 98);
     border: 3px black solid;
     border-radius: 10px;
+    color: white;
     font-size: 2rem;
+    font-weight: bold;
     letter-spacing: 5px;
     padding: 30px 20px;
     text-align: center;
 }
 
 #letters {
-    background-color: white;
+    background-color: rgb(235, 71, 98);
     border: 2px solid black;
     border-radius: 10px;
     padding: 20px 50px;
@@ -78,14 +80,15 @@ body {
 }
 
 #category {
-    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
     padding: 30px 0px;
+    text-align: center;
     text-transform: uppercase;
 }
 
 .new-game {
     width: fit-content;
-    background-color: aqua;
     margin: 50px;
 
     border: 2px solid black;

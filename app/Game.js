@@ -5,10 +5,10 @@ class Game {
    lastStep = 7;
 
    quotes = [{
-      text: 'harry potter',
-      category: 'Book'
+      text: 'premier league',
+      category: 'Sport'
    }, {
-      text: 'lord of the ring',
+      text: 'sherlock holmes',
       category: 'Book'
    }, {
       text: 'game of throne',
@@ -25,7 +25,7 @@ class Game {
       this.outputWrapper = outputWrapper;
 
       const { text, category } = this.quotes[Math.floor(Math.random() * this.quotes.length)];
-      this.categoryWrapper.innerHTML = `Category: ${category}`;
+      this.categoryWrapper.innerHTML = category;
       this.quote = new Quote(text);
    }
 
@@ -46,7 +46,7 @@ class Game {
       for (let i = 0; i < 26; i++) {
          const label = (i + 10).toString(36);
          const button = document.createElement('button');
-         button.innerHTML = label;
+         button.innerHTML = label.toUpperCase();
          button.addEventListener('click', (event) => this.playerAttempt(label, event));
          this.lettersWrapper.appendChild(button);
       }
@@ -54,7 +54,7 @@ class Game {
 
    drawSlogan() {
       const content = this.quote.getSloganContent();
-      this.wordWrapper.innerHTML = content;
+      this.wordWrapper.innerHTML = content.toUpperCase();
       if (!content.includes('_')) {
          this.winning();
       }
@@ -67,6 +67,7 @@ class Game {
 
       const section = document.getElementById('hangman')
       const button = document.createElement('button');
+
       button.classList.add('new-game');
       button.innerHTML = 'New Game';
       section.appendChild(button);
